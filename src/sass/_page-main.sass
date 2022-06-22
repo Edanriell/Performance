@@ -1,0 +1,113 @@
+=disableSelect
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+=fixImgBug
+  vertical-align: middle
+  max-width: 100%
+  height: auto
+
+.page-main
+  background: #E5E5E5
+
+  &__article
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 7rem 5rem
+    padding: 0 0 7rem 0
+
+    &__header
+      grid-column: 1 / -1
+      display: flex
+      align-items: center
+      flex-direction: column
+      padding: 3.3rem 0 0 0
+
+      &__heading
+        font-family: "Lora-Regular"
+        font-weight: 400
+        font-style: normal
+        font-size: 4.6rem
+        line-height: 6.9rem
+        color: rgba(31, 30, 28, 1)
+        width: 86rem
+        text-align: center
+        margin: 0 0 3rem 0
+
+      &__content
+        display: grid
+        grid-template-columns: repeat(3, auto)
+        column-gap: 50px
+
+        &__time
+          font-family: "Lora-Regular"
+          font-weight: 400
+          font-style: normal
+          font-size: 1.8rem
+          line-height: 2.7rem
+          color: rgba(31, 30, 28, 1)
+
+        &__author
+          @extend .page-main__article__header__content__time
+
+        &__photographer
+          @extend .page-main__article__header__content__time
+
+    &__big-img
+      grid-column: 1 / -1
+      width: 1240px
+      height: 877px
+      +fixImgBug
+      +disableSelect
+
+    &__main-text
+      grid-column: span 1
+      font-family: "Lora-Regular"
+      font-weight: 400
+      font-style: normal
+      font-size: 1.8rem
+      line-height: 2.7rem
+      color: rgba(31, 30, 28, 1)
+
+    &__figure
+      grid-column: span 1
+
+      &__content
+        margin: 2rem 0 0 0 
+
+        &__text 
+          font-family: "Lora-Regular"
+          font-weight: 400
+          font-style: normal
+          font-size: 1.6rem
+          line-height: 2.4rem
+          color: rgba(31, 30, 28, 1)
+          padding: 1rem 0 0 0
+
+      &__img
+        width: 380px
+        height: 526px
+        +fixImgBug
+        +disableSelect
+
+      &__img-wide
+        width: 810px
+        height: 438px
+        +fixImgBug
+        +disableSelect
+
+    &__figure-splitted
+      grid-column: span 2
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      column-gap: 50px
+
+      &__content__text
+        padding: 0 0 1rem 0
+
+    &__figure-wide
+      grid-column: span 2
